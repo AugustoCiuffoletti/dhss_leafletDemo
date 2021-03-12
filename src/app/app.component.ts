@@ -1,6 +1,6 @@
 // Credits: https://stackblitz.com/edit/leaflet-test-grid-iqjm3t
 
-import { Component, ElementRef, ComponentFactoryResolver } from "@angular/core";
+import { Component, ElementRef } from "@angular/core";
 import { map, latLng, tileLayer } from "leaflet";
 
 @Component({
@@ -18,8 +18,8 @@ export class AppComponent {
 
   ngOnInit() {
     this.myMap = map(this.element.nativeElement, {
-      zoom: 15,
-      center: latLng(51.508, -0.11),
+      zoom: 18,
+      center: latLng(43.7229, 10.3966),
       layers: [
         tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           maxZoom: 18,
