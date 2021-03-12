@@ -1,14 +1,7 @@
-import {
-  Component,
-  ElementRef,
-  ComponentFactoryResolver
-} from "@angular/core";
-import {
-  map,
-  latLng,
-  tileLayer
-} from "leaflet";
-import { HelloComponent } from "./hello.component";
+// Credits: https://stackblitz.com/edit/leaflet-test-grid-iqjm3t
+
+import { Component, ElementRef, ComponentFactoryResolver } from "@angular/core";
+import { map, latLng, tileLayer } from "leaflet";
 
 @Component({
   selector: "my-app",
@@ -20,14 +13,10 @@ export class AppComponent {
   myMap: Map;
 
   constructor(
-    private element: ElementRef,
-    private componentFactoryResolver: ComponentFactoryResolver
+    private element: ElementRef
   ) {}
 
   ngOnInit() {
-    const factory = this.componentFactoryResolver.resolveComponentFactory(
-      HelloComponent
-    );
     this.myMap = map(this.element.nativeElement, {
       zoom: 15,
       center: latLng(51.508, -0.11),
