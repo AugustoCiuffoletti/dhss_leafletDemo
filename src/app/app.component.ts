@@ -1,14 +1,10 @@
 import {
   Component,
-  ViewContainerRef,
   ElementRef,
-  NgZone,
-  ComponentFactory,
   ComponentFactoryResolver
 } from "@angular/core";
 import {
   map,
-  Map,
   latLng,
   tileLayer
 } from "leaflet";
@@ -25,7 +21,6 @@ export class AppComponent {
 
   constructor(
     private element: ElementRef,
-    private zone: NgZone,
     private componentFactoryResolver: ComponentFactoryResolver
   ) {}
 
